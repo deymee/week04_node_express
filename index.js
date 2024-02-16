@@ -3,6 +3,8 @@ const app = express();
 
 const SERVER_PORT = process.env.PORT || 3000;
 
+app.use(express.static('views'));
+
 // https://localhost:3000/
 app.get('/', (req, res) => {
     res.send('<h1>Hello World!<h1/>');
